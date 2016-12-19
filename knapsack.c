@@ -4,7 +4,7 @@
 
 #define N 38
 
-int weight(const int a[N], const bool vs[N]) {
+unsigned int weight(const unsigned int a[N], const bool vs[N]) {
     int v = 0;
     for(int j = 0; j < N; j++) {
         if(vs[j] == true) {
@@ -15,12 +15,12 @@ int weight(const int a[N], const bool vs[N]) {
 }
 
 int main(int argc, char *argv[]) {
-    const int a[N] = {1,1,1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,5,5,7,7,7,7,7,7,7,7,9,9,9,9};
-    const int b    = 40;
+    const unsigned int a[N] = {1,1,1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,5,5,7,7,7,7,7,7,7,7,9,9,9,9};
+    const unsigned int b    = 40;
 
-    bool xs[N][N]  = { {0} };
-    int  totals[N] = { 0 };
-    int  bs[N+1]   = { 0 };
+    bool         xs[N][N]  = { {0} };
+    unsigned int totals[N] = { 0 };
+    unsigned int bs[N+1]   = { 0 };
 
     for(int j = 1; j <= N; j++) {
         bs[j] = bs[j-1] + a[j-1];
@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
             if(weight(a, xs[i]) <= bs[i]) totals[i]++;
         }
 
-        if(k % 1000 == 0) {
+        if(k % 10000 == 0) {
             double size = 1;
             for(int i = 0; i < N; i++) {
                 if(totals[i] == 0) {
