@@ -1,0 +1,1 @@
+* Varianzmesser (für verschiedene Parameterwahlen)
