@@ -4,7 +4,6 @@
 from __future__ import division
 from __future__ import print_function
 import numpy as np
-import matplotlib.pyplot as plt
 
 N = 20
 T = 1.5
@@ -22,12 +21,6 @@ for i in range(N):
         x = spins[i, (j-1)%N] + spins[(i-1) % N, j] + spins[i, (j+1)%N] + spins[(i+1)%N, j]
         E = E + L * spins[i,j] * x + h * spins[i,j]
 
-plt.ion()
-fig = plt.figure()
-ax  = fig.add_subplot(111)
-im  = ax.imshow(spins, vmin=0, vmax=1, interpolation="nearest")
-fig.canvas.draw()
-
 it = 0
 while True:
     i = int(np.random.uniform(0,N))
@@ -40,24 +33,7 @@ while True:
         E = E + delta
 
     if it % 100000 == 0:
-        im.set_data(spins)
-        ax.draw_artist(im)
-        im.figure.canvas.blit(im.figure.bbox)
-        fig.canvas.draw()
-        E = 0
-        for i in range(N):
-            for j in range(N):
-                x = spins[i, (j-1)%N] + spins[(i-1) % N, j] + spins[i, (j+1)%N] + spins[(i+1)%N, j]
-                E = E + L * spins[i,j] * x + h * spins[i,j]
-
-        print(it, E, h)
-
-    if it > 90000*3:
-        pass
-    elif it > 90000*2:
-        h = h - 1/90000
-    elif it > 90000:
-        h = h + 1/90000
+        print(T, E)
+        T = T + 0.01
 
     it = it + 1
-
