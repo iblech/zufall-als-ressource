@@ -17,4 +17,3 @@
 * Matrixmultiplikation
 * Übungsaufgaben zur Multiplikation (u.a. Demonstration von Nullteilern
   und Nichtkommutativität)
-* Lösung linearer Gleichungssysteme (theoretisch und mit numpy.linalg.solve)
