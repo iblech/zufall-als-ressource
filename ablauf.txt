@@ -1,0 +1,20 @@
+=== Tag 0, abends
+
+* Vorstellung
+* Orgakram (u.a. Dokuforge)
+* Motivation
+* Zwerge in einer Reihe
+
+
+=== Tag 1: Bootcamp: Python und LA
+
+* Variablen und for/range. Damit Zahlen von 1 bis 100 summieren, Quadratzahlen
+  summieren.
+* if. Damit Primzahlen bis 100 finden, Collatz-Vermutung testen.
+* Listen. Damit Liste der ersten 100 Fibonacci-Zahlen erstellen.
+
+* Vektoren und Matrizen
+* Matrixmultiplikation
+* Übungsaufgaben zur Multiplikation (u.a. Demonstration von Nullteilern
+  und Nichtkommutativität)
+* Lösung linearer Gleichungssysteme (theoretisch und mit numpy.linalg.solve)
