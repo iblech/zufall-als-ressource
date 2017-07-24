@@ -22,6 +22,11 @@
 * Übungsaufgaben zur Multiplikation (u.a. Demonstration an Beispielen von Nullteilern
   und Nichtkommutativität)
 
-* Matrizen (2D-arrays) in Python einführen und Visualisieren anhand Transformation der S¹ 
+* Matrizen (2D-arrays) in Python einführen und Visualisieren anhand Transformation der S¹
+
+
+=== spätere Tage
+
+* leichtes MCMC Beispiel 
 
 
