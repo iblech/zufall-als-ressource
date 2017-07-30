@@ -15,7 +15,7 @@ def make_sampler(n,m):
 
         if x[i,j] == 1:
             x[i,j] = 0
-        elif (i == 0 or x[i-1,j] == 0) and (i == n-1 or x[i+1,j] == 0) and (j == 0 or x[i,j-1] == 0) and (j == m-1 or x[i,j+1] == 0):
+        elif (x[(i-1) % n,j] == 0) and (x[(i+1) % n,j] == 0) and (j == 0 or x[i,(j-1) % m] == 0) and (j == m-1 or x[i,(j+1) % m] == 0):
             x[i,j] = 1
 
         return x
@@ -60,10 +60,10 @@ print(c,d)
 print(1/(c*d))
 
 # für DxD, mehrere Durchgänge
-D = 10
+D = 8
 
-for i in range(10):
-    for i in range(10):
+for k in range(10):
+    for j in range(10):
         p = 1
         for i in range(1,D+1):
             q = proportion(make_sampler(i,D), has_zero_first_row)
